@@ -53,19 +53,19 @@ class Main extends PluginBase{
 
     }
     public function registerCommands():void{
-        $this->getServer()->getCommandMap()->register("fill",new FillCommand());
-        $this->getServer()->getCommandMap()->register("replace",new ReplaceCommand());
-        $this->getServer()->getCommandMap()->register("pos1",new Pos1Command());
-        $this->getServer()->getCommandMap()->register("pos2",new Pos2Command());
-        $this->getServer()->getCommandMap()->register("wand",new WandCommand());
-        $this->getServer()->getCommandMap()->register("snow",new SnowCommand());
-        $this->getServer()->getCommandMap()->register("plane",new PlaneCommand());
-        $this->getServer()->getCommandMap()->register("id",new IdCommand());
-        $this->getServer()->getCommandMap()->register("brush",new BrushCommand());
-        $this->getServer()->getCommandMap()->register("clearinv",new ClearInventoryCommand());
-        $this->getServer()->getCommandMap()->register("undo",new UndoCommand());
-        $this->getServer()->getCommandMap()->register("naturalsize",new NaturalizeCommand());
-        $this->getServer()->getCommandMap()->register("count",new CountCommand());
+        $this->getServer()->getCommandMap()->register("fill",new FillCommand($this));
+        $this->getServer()->getCommandMap()->register("replace",new ReplaceCommand($this));
+        $this->getServer()->getCommandMap()->register("pos1",new Pos1Command($this));
+        $this->getServer()->getCommandMap()->register("pos2",new Pos2Command($this));
+        $this->getServer()->getCommandMap()->register("wand",new WandCommand($this));
+        $this->getServer()->getCommandMap()->register("snow",new SnowCommand($this));
+        $this->getServer()->getCommandMap()->register("plane",new PlaneCommand($this));
+        $this->getServer()->getCommandMap()->register("id",new IdCommand($this));
+        $this->getServer()->getCommandMap()->register("brush",new BrushCommand($this));
+        $this->getServer()->getCommandMap()->register("clearinv",new ClearInventoryCommand($this));
+        $this->getServer()->getCommandMap()->register("undo",new UndoCommand($this));
+        $this->getServer()->getCommandMap()->register("naturalsize",new NaturalizeCommand($this));
+        $this->getServer()->getCommandMap()->register("count",new CountCommand($this));
 
     }
     public function registerEvents():void{
