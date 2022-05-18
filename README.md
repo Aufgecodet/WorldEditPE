@@ -1,4 +1,6 @@
 # WorldEditPE
+ system is no longer supported until an indefinite time!
+
 A WorldEdit Plugin for PocketMine-MP 4.0
 
 #Whats is WorldEditPE?
